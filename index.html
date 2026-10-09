@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Welcome Page -->
+<div id="welcome">
+  <div class="logo">👨‍🍳</div>
+  <h1 class="tagline">
+    "COOK WITH CREATIVITY,<br>
+    SAVOR WITH SOPHISTICATION...!"
+  </h1>
+  <button onclick="startApp()">⭐ Start</button>
+</div>
+
+<!-- Main App -->
+<div id="app" class="hidden">
+  <div class="controls">
+    <button class="back-btn" onclick="goHome()">⬅ Back</button>
+
+    <input type="text" id="search" placeholder="Search recipe...">
+
+    <select id="type">
+      <option value="all">All</option>
+      <option value="veg">Vegetarian</option>
+      <option value="nonveg">Non-Vegetarian</option>
+    </select>
+
+    <button onclick="searchRecipe()">Search</button>
+  </div>
+
+  <div id="recipes" class="grid"></div>
+</div>
+
+<footer>
+  Recipe App | Mini Project
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("https://images.unsplash.com/photo-1543353071-873f17a7a088")
+              no-repeat center center/cover;
+}
+
+/* Welcome Page */
+#welcome {
+  height: 100vh;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.logo {
+  font-size: 90px;
+}
+
+.tagline {
+  font-size: 30px;
+  margin: 30px 0;
+  animation: fade 3s ease;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+#welcome button {
+  padding: 12px 25px;
+  background: #ff9800;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* App Page */
+.hidden { display: none; }
+
+#app {
+  min-height: 100vh;
+  background: rgba(66, 91, 63, 0.6);   /* DARK BACKGROUND */
+  padding: 20px;
+  color: white;
+}
+
+.controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.back-btn {
+  background: #e91e63;
+  color: white;
+}
+
+/* Recipe Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  background: #2196f3;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Review */
+.review {
+  margin-top: 15px;
+}
+
+.review button {
+  margin: 5px;
+  background: #4caf50;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+/* ===== REVIEW EFFECTS (ADDED) ===== */
+
+/* BALLOONS */
+.balloon {
+  position: fixed;
+  bottom: -50px;
+  font-size: 30px;
+  animation: floatUp 4s linear;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+
+/* CONFETTI */
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  animation: fallDown 3s linear;
+  z-index: 9999;
+}
+
+@keyframes fallDown {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* FIREWORK */
+.fire {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: explode 1.2s ease-out;
+  z-index: 9999;
+}
+
+@keyframes explode {
+  to {
+    transform: scale(15);
+    opacity: 0;
+  }
+}
+@keyframes heartFall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
